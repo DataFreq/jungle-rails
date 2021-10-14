@@ -14,13 +14,14 @@
       <thead>
         <tr>
           <th colspan="2">Product</th>
+          <th>Unit Price</th>
           <th>Quantity</th>
           <th>Price</th>
         </tr>
       </thead>
       <tbody>
         <% @line_items.each do |item| %>
-          <%= render 'item', product: line_item.product, quantity: line_item[:quantity].to_i %>
+          <%= render 'item', product: item[:product], quantity: item[:line_item].quantity.to_i %>
         <% end %>
       </tbody>
       <tfoot>
